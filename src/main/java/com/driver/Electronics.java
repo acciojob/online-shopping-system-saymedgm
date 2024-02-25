@@ -1,18 +1,20 @@
 package com.driver;
 
 public class Electronics extends Product {
-	 private String brand;
-	    public Electronics(int productId, String productName, double price, String brand) {
-	   super(productId, productName, price);
-    // your code goes here
-}
+	private String brand;
+	public Electronics(int productId, String productName, double price, String brand) {
+		super(productId, productName, price);
+		this.brand = brand;
+	}
 
-public String getBrand() {
-	// your code goes here
-    return brand;
-}
+	public String getBrand() {
+		return brand;
+	}
 
-public void displayDetails() {
-    // your code goes here
-}
+	public void displayDetails() {
+		System.out.println("Product ID: " + getProductId());
+		System.out.println("Product Name: " + getProductName());
+		System.out.println("Price: $" + getPrice());
+		System.out.println("Brand: " + brand);
+	}
 }
